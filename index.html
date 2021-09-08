@@ -1,13 +1,116 @@
-<!DOCTYPE html> 
-<html lang="en"> 
-	<head> 
-		<title>LASTNAME Chapter8-9HandsOnExercise</title> 
-		<meta charset="utf-8"> 
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Crowe Chapter8-9HandsOnExercise</title>
+		<meta charset="utf-8">
 		<style>
-		
-		</style>
-	</head> 
-<body> 
+		table{margin: auto;
+					border: 5px solid #000;
+					border-spacing: 0;
+				}
+				td, th {padding: 0.5em;
+					border: .5px solid #000;
+				}
+				caption {font-size: 1.2em;}
+				#wrapper {display: flex;
+									flex-direction: row;}
+				#stupers{flex: 2;}
+				#stuRating{flex: 3;}
+				#stuInfoCol1{flex: 2;}
+				input[type="radio"], input[type="checkbox"]{display:inline;}
+				body {background-color: #E2DBDC;}
 
-</body> 
-</html> 
+
+	</style>
+	</head>
+	<body>
+		<h1> Movie Information Table </h1>
+			<table>
+				<thead>
+					<tr>
+						<th id="Title"> Title of Movie</th>
+						<th id="D"> Director </th>
+						<th id="A"> Leading Actor </th>
+						<th id="AS"> Leading Actress </th>
+						<th id="R"> Rating </th>
+						<th id="DIS"> Discription </th>
+						<th id="DIS"> Movie Review </th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td headers="Title">Creed 2</td>
+						<td headers="D">Steven Caple Jr.</td>
+						<td headers="A">Michael B. Jordan</td>
+						<td headers="AS">Tessa Thompson</td>
+						<td headers="R">PG-13</td>
+						<td headers="DIS">Creed 2 is a fighting movie where the main actor, Creed, takes on the son of the man who killed his father.</td>
+						<td headers="REV"><a href="https://www.rottentomatoes.com/m/creed_ii">Review
+						</a>
+					</tr>
+					<tr>
+				</tbody>
+			</table>
+			<h1>Musical Information Form</h1>
+			<p>Required fields are marked with an asterick *</p>
+			<form method="post" action="https://webdevbasics.net/scripts/demo.php">
+			<div id="wrapper">
+				<fieldset id="stupers"><legend> Personal Information</legend>
+					<label for="myName">*Name:</label>
+					<input type="text" name="myName" id="myName" required="required"
+					placeholder="your first and last name">
+					<label for="myEmail">*Email:</label>
+					<input type="text" name="myEmail" id="myEmail" required="required"
+					placeholder="you@yourdomain.com">
+				</fieldset>
+				<fieldset id="stuInfoCol1"><legend>Music Type</legend>
+					Select Status: <br>
+					<input type="radio" name="myStatus" id="r" value="Rap">
+					Rap<br>
+					<input type="radio" name="myStatus" id="h" value="Hip-Hop">
+					Hip-Hop<br>
+					<input type="radio" name="myStatus" id="c" value="Country">
+					Country<br>
+					<input type="radio" name="myStatus" id="i" value="Clasical">
+					Clasical<br>
+					<input type="radio" name="myStatus" id="j" value="Jazz">
+					Jazz<br>
+
+					Select Streaming Service:<br>
+					<input type="checkbox" name="myOrg" id="sp" value="Spotify">
+					Spotify<br>
+					<input type="checkbox" name="myOrg" id="ap" value="Apple Music">
+					Apple Music<br>
+					<input type="checkbox" name="myOrg" id="yt" value="Youtube">
+					Youtube<br>
+					<input type="checkbox" name="myOrg" id="pa" value="Pandoria">
+					Pandoria<br>
+					<input type="checkbox" name="myOrg" id="ot" value="Other">
+					Other<br>
+				</fieldset>
+				<fieldset id="stuIncoCol2"><legend>Song</legend>
+					Whats your prefered song length: <br>
+					<select size="1" name="Length" id="Length">
+						<option value=">2">>2 Min</option>
+						<option value="2-4">2-4 Min</option>
+						<option value="4+">4+ Min</option>
+						<br>
+					</select>
+					<br>
+		<label for="myRating"></label>How would you rate your musical taste: (1(bad) - 10(good)):</label>
+		<input type="range" name="myRating" id="myRating" min="1" max="10">
+		<br>
+		<label for="myComments">*Comments</label>
+		<textarea name="myComments" id="myComments" rows="3" cols="60"
+		required="required"></textarea>
+		<input type="reset">
+		<input id="mySubmit" type="submit" value="submit">
+	</fieldset>
+
+				</fieldset>
+			</div>
+			<p>Noah Crowe noahgcrowe@gmail.com</p>
+
+	</body>
+	</html>
+	</html>
